@@ -1,0 +1,3 @@
+/home/choc01ate/SGM/SGM_Project_Cmake/build/CMakeFiles/main.dir
+/home/choc01ate/SGM/SGM_Project_Cmake/build/CMakeFiles/edit_cache.dir
+/home/choc01ate/SGM/SGM_Project_Cmake/build/CMakeFiles/rebuild_cache.dir

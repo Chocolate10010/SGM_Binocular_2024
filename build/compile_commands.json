@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/choc01ate/SGM/SGM_Project_Cmake/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/opencv4 -g -o CMakeFiles/main.dir/src/main.cpp.o -c /home/choc01ate/SGM/SGM_Project_Cmake/src/main.cpp",
+  "file": "/home/choc01ate/SGM/SGM_Project_Cmake/src/main.cpp"
+},
+{
+  "directory": "/home/choc01ate/SGM/SGM_Project_Cmake/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/opencv4 -g -o CMakeFiles/main.dir/src/SemiGlobalMatching.cpp.o -c /home/choc01ate/SGM/SGM_Project_Cmake/src/SemiGlobalMatching.cpp",
+  "file": "/home/choc01ate/SGM/SGM_Project_Cmake/src/SemiGlobalMatching.cpp"
+},
+{
+  "directory": "/home/choc01ate/SGM/SGM_Project_Cmake/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/opencv4 -g -o CMakeFiles/main.dir/src/sgm_util.cpp.o -c /home/choc01ate/SGM/SGM_Project_Cmake/src/sgm_util.cpp",
+  "file": "/home/choc01ate/SGM/SGM_Project_Cmake/src/sgm_util.cpp"
+}
+]
