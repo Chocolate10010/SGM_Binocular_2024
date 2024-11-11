@@ -57,7 +57,6 @@ bool SemiGlobalMatching::Initialize(const uint32& width, const uint32& height, c
     cost_aggr_7_ = new uint8[size]()                ;
     cost_aggr_8_ = new uint8[size]()                ;
 
-
     disp_left_  = new float32[img_size]()           ; // 视差图分配空间
     disp_right_ = new float32[img_size]()           ;
 
