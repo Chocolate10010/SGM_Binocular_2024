@@ -43,7 +43,7 @@ void sgm_util::census_transform_5x5(const uint8* source, uint32* census, const s
 	}
 }
 
-uint16 sgm_util::Hamming32(const uint32& x, const uint32& y)
+uint8 sgm_util::Hamming32(const uint32& x, const uint32& y)
 {
 	uint32 dist = 0, val = x ^ y;
 
@@ -54,6 +54,18 @@ uint16 sgm_util::Hamming32(const uint32& x, const uint32& y)
 	}
 
 	return dist;
+}
+uint8 sgm_util::Hamming64(const uint64& x, const uint64& y)
+{
+	uint64 dist = 0, val = x ^ y;
+
+	// Count the number of set bits
+	while (val) {
+		++dist;
+		val &= val - 1;
+	}
+
+	return static_cast<uint8>(dist);
 }
 
 /**
@@ -474,9 +486,6 @@ void sgm_util::RemoveSpeckles(float32* disparity_map, const sint32& width, const
 	const sint32& diff_insame, const uint32& min_speckle_aera, const float& invalid_val)
 {
 	assert(width > 0 && height > 0);
-	if (width < 0 || height < 0) {
-		return;
-	}
 
 	// 定义标记像素是否访问的数组
 	std::vector<bool> visited(uint32(width*height),false);
