@@ -6,8 +6,9 @@ using namespace std::chrono;
 
 /**
  * \brief 
- * \param argv 3
- * \param argc argc[1]:左影像路径 argc[2]: 右影像路径 argc[3]: 视差图路径
+ * \param argv 5
+ * \param argc[1]:左影像路径  argc[2]: 右影像路径 argc[3]: 视差图路径 
+ * \param argc[4]: 最小视差值 argc[5]: 最大视差值
  * \return 
 */
 
@@ -38,8 +39,8 @@ int main(int argv,char** argc)
 
     SemiGlobalMatching::SGMOption sgm_option                        ; //【匹配参数设计】
     sgm_option.num_paths          = 8                               ;
-    sgm_option.min_disparity      = argv < 4 ? 0 : atoi(argc[3])    ; //候选视差范围
-    sgm_option.max_disparity      = argv < 5 ? 64 : atoi(argc[4])   ;
+    sgm_option.min_disparity      = argv < 4 ? 0  : atoi(argc[4])   ; //候选视差范围
+    sgm_option.max_disparity      = argv < 5 ? 64 : atoi(argc[5])   ;
     sgm_option.census_size        = SemiGlobalMatching::Census5x5   ; // census窗口类型
     sgm_option.is_check_lr        = true                            ; // 一致性检查
     sgm_option.lrcheck_thres      = 1.0f                            ;
